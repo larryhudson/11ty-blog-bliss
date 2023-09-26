@@ -1,6 +1,7 @@
 <ul class="archive">
   {% for yearlyArchive in collections.publishedPosts | groupByYear %}
     <li>
+    {# TODO: could replace with details/summary #}
       <h3 tabindex='0' class="year-heading" id="year-{{ yearlyArchive.year }}">
         {% emoji "▼", "arrow" %} <time>{{ yearlyArchive.year }}</time>
       </h3>

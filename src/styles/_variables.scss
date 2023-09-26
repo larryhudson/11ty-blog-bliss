@@ -4,11 +4,11 @@ $baseSize: 16px;
 
 // Base colors
 
-$baseHue: 210;
+$baseHue: 0;
 
 $baseColor: hsl($baseHue, 80%, 50%);
 $white: hsl($baseHue, 80%, 98%);
-$black: hsl($baseHue, 5%, 10%);
+$black: hsl($baseHue, 5%, 0%);
 
 // Fonts
 
@@ -17,11 +17,24 @@ $serifFontFamily: 'Merriweather', $baseSerifFontStack;
 $serifBoldFontFamily: 'Merriweather Bold', $baseSerifFontStack;
 $serifItalicFontFamily: 'Merriweather Italic', $baseSerifFontStack;
 $serifBoldItalicFontFamily: 'Merriweather Bold Italic', $baseSerifFontStack;
-$sansSerifFontFamily: PT Sans, ui-sans-serif, system-ui, -apple-system,
-  BlinkMacSystemFont, Segoe UI, Roboto, SF Pro, Helvetica, Arial, Noto Sans,
+$sansSerifFontFamily:
+  PT Sans,
+  ui-sans-serif,
+  system-ui,
+  -apple-system,
+  BlinkMacSystemFont,
+  Segoe UI,
+  Roboto,
+  SF Pro,
+  Helvetica,
+  Arial,
+  Noto Sans,
   sans-serif;
 $arialFamily: Arial, Helvetica, sans-serif;
-$emojiFontFamily: Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
+$emojiFontFamily:
+  Apple Color Emoji,
+  Segoe UI Emoji,
+  Segoe UI Symbol,
   Noto Color Emoji;
 
 // Spacings
@@ -59,8 +72,8 @@ $longTransitionTime: 0.2s;
 
 $lightBackgroundColor: $white;
 $lightTextColor: $black;
-$lightLinkColor: darken($baseColor, 5%);
-$lightLinkHoverColor: lighten($lightLinkColor, 15%);
+$lightLinkColor: darken($baseColor, 20%);
+$lightLinkHoverColor: lighten($lightLinkColor, 10%);
 $lightPostMetaColor: $lightTextColor;
 $lightTopMetaColor: lighten($black, 40%);
 $lightBottomMetaColor: $lightTopMetaColor;
