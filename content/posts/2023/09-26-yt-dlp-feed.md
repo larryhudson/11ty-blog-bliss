@@ -1,5 +1,6 @@
 ---
 title: Hooking up yt-dlp to a podcast feed
+customPermalink: yt-dlp-podcast-feed
 description:
 date: 2023-09-26
 tags:
