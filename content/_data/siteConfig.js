@@ -150,13 +150,13 @@ module.exports = {
   enablePWA: false, // If enabled, service worker for PWA will be registered
   manifestJson: {
     // Language of PWA application
-    language: 'en-US',
+    language: 'en-AU',
     // Default theme color for PWA application. Affects how the OS displays
     // the site
-    themeColor: '#1773cf',
+    themeColor: '#8a0f0f',
     // Placeholder background color for the application page to display
     // before its stylesheet is loaded
-    backgroundColor: '#1773cf',
+    backgroundColor: '#8a0f0f',
   },
   // ---------------------------------------------------------------------------
   // Settings for post share buttons
@@ -255,11 +255,11 @@ module.exports = {
   // ---------------------------------------------------------------------------
   twtxt: {
     // Your nickname on Twtxt
-    nick: 'eleventyBlissTemplate',
+    nick: 'larryhudson',
     // Path to Twtxt file, used as permalink in the template
     path: '/twtxt.txt',
     // Path to your Twtxt avatar
-    avatar: '/images/twtxt-avatar.png',
+    avatar: '/images/Larry_366.png',
     // Separator used in Twtxt post contents between a title and a link
     separator: ' - ',
     // How many posts should be displayed in Twtxt file?
