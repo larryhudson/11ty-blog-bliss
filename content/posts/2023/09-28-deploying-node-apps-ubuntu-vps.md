@@ -1,5 +1,6 @@
 ---
 title: Deploying Node apps on an Ubuntu VPS server
+customPermalink: /deploying-node-ubuntu-vps/
 date: 2023-09-28
 tags:
   - programming
