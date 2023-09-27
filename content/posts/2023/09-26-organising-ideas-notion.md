@@ -16,6 +16,9 @@ disclaimer:
 - Even when I think of things to do, sometimes I waste my time scrolling through
   social media or YouTube etc. Time can slip away when you're doing the easy,
   passive things that feel good in the moment.
+
+## A system for organising ideas
+
 - I'm trying out a new way of organising the ideas of things that I want to do.
 - I have a Notion setup with three linked databases:
   - **Areas** - these are my different hobbies and areas of my life, e.g.

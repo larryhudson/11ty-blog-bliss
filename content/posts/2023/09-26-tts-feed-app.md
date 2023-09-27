@@ -22,10 +22,21 @@ disclaimer:
 - I've tried to make this a few times. I've experimented with different
   combinations of frameworks, languages and deployment options. But I've finally
   landed on a solution that I'm happy with.
+
+## `astro-sqlite-tts-feed`
+
 - It's an Astro web app, backed by a SQLite database and BullMQ for handling
   background tasks. I'm using the Azure TTS API for the text to speech. It's
   deployed on a DigitalOcean VPS server, using Nginx to route the requests through
-  to the web app, and PM2 for handling the
+  to the web app, and PM2 for handling the Node processes.
+- You can view the [source code on
+  GitHub](https://github.com/larryhudson/astro-sqlite-tts-feed) if you're interested.
+- Aside: I've extended the web app to also support downloading media using
+  `yt-dlp` and adding to the podcast feed. I've written about that in this other
+  post: [Hooking up yt-dlp to a podcast feed](/yt-dlp-podcast-feed/).
+
+## What I've learned building this app
+
 - In making this app, I've learned a lot about SQLite. In the past I was
   intimidated by SQL and always used ORMs, sticking to frameworks like Django. But
   with GitHub Copilot and ChatGPT, I've been learning to write simple SQL and it's
