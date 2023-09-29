@@ -45,7 +45,7 @@ module.exports = {
   opens_new_tab: 'opens a new tab',
   image_credit: 'Image credit',
   copy_to_clipboard: 'Copy article URL to clipboard',
-  which_instance: 'To which instance?',
+  which_instance: 'Enter your instance URL',
   mastodon_share_line_1:
     'Clicking Share will open a new browser tab. Make sure your browser permits websites to open new tabs.',
   mastodon_share_line_2:
