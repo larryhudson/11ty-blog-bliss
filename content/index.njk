@@ -18,6 +18,20 @@ permalink: "{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber + 1 }}{%
   </ul>
 </div>
 
+<div id="my-element">Testing</div>
+<script>
+const el = document.getElementById('my-element');
+el.addEventListener('click', function myFunction() {
+    console.log("hello")
+})
+</script>
+
+<p style="color: black; background-color: #011">Colour contrast?</p>
+
+<ul>
+  <div>crappy list</div>
+</ul>
+
 {% include "partials/scroll-up-arrow.njk" %}
 
 {%- set totalPages = pagination.pages|length -%}
