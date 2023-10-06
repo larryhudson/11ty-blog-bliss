@@ -77,7 +77,8 @@ const isDone = progress === 100;
 )}
 ```
 
-To reduce duplicated code, you can create a component:
+To reduce duplicated code, you can create a `<JobProgress>` component that takes
+`id` and `progress` as props:
 
 ```html
 ---
