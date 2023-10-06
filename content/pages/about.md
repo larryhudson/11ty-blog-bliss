@@ -13,7 +13,7 @@ I'm {{ siteConfig.author.name }}. Welcome to my blog!
 
 I'm a web developer and programmer based in Torquay, Australia. I'm the Team
 Leader of Innovation, Tech and Web at [the Information Access
-Group](https:/www.informationaccessgroup.com), a company
+Group](https://www.informationaccessgroup.com), a company
 that specialises in accessible communications.
 
 For as long as I can remember I have been interested in computers and the web.
