@@ -138,7 +138,7 @@ const isDone = progress === 100;
 
 This is just one of the ways that HTMX can power-up the HTML in your web app. I’m exploring [the examples on the HTMX site](https://htmx.org/examples/) and building them, to get more comfortable with the HTMX way of working.
 
-Extra note: if you’re having trouble installing HTMX into your Astro project (like I did), the trick is to import HTMX as an explicit URL import by adding `?url` to the end of the import path. So install HTMX into Astro, run `npm install [htmx.org](http://htmx.org)` then add this to your `.astro` file (page or component):
+Extra note: if you’re having trouble installing HTMX into your Astro project (like I did), the trick is to import HTMX as an explicit URL import by adding `?url` to the end of the import path. So install HTMX into Astro, run `npm install htmx.org` then add this to your `.astro` file (page or component):
 
 ```html
 ---
