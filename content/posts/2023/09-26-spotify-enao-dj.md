@@ -1,6 +1,5 @@
 ---
 title: Making a better Spotify DJ
-description:
 date: 2023-09-26
 tags:
   - spotify

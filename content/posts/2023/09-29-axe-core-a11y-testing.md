@@ -1,6 +1,5 @@
 ---
 title: Running accessibility tests after your Eleventy build completes
-description:
 date: 2023-09-29
 tags:
   - programming

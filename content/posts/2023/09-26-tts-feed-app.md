@@ -1,7 +1,6 @@
 ---
 title: Making a web app that generates a podcast of interesting web articles
 customPermalink: /text-to-speech-podcast-feed/
-description:
 date: 2023-09-26
 tags:
   - text to speech

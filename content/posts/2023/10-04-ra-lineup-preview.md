@@ -1,7 +1,6 @@
 ---
 title: Making a web app for previewing Resident Advisor event lineups with Astro and HTMX
 customPermalink: '/ra-lineup-preview/'
-description:
 date: 2023-10-04
 tags:
   - programming

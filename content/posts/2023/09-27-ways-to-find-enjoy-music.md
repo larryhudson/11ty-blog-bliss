@@ -1,7 +1,6 @@
 ---
 title: Different ways to find and enjoy music - Every Noise at Once and DJ mixes
 customPermalink: /ways-to-find-enjoy-music/
-description:
 date: 2023-09-27
 tags:
   - music

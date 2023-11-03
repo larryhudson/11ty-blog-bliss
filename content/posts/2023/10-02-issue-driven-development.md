@@ -1,7 +1,6 @@
 ---
 title: Simon Willison's issue-driven development
 customPermalink: /issue-driven-development/
-description: Working on ideas as GitHub issues
 date: 2023-10-02
 tags:
   - programming

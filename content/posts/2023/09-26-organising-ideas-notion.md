@@ -1,6 +1,5 @@
 ---
 title: Organising ideas in Notion
-description:
 date: 2023-09-26
 tags:
   - productivity

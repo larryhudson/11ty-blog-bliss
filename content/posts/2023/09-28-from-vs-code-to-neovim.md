@@ -1,6 +1,5 @@
 ---
 title: My experience moving from VS Code to Neovim
-description:
 date: 2023-09-28
 tags:
   - programming

@@ -1,5 +1,6 @@
 ---
 title: Weeknotes - 8 October 2023
+description: A round of what I've been working on and enjoying this week
 customPermalink: /2023-10-08-week-notes/
 date: 2023-10-08
 tags:

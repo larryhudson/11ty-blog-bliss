@@ -1,6 +1,5 @@
 ---
 title: I love my cheap little Linux box
-description:
 date: 2023-09-26
 tags:
   - linux
