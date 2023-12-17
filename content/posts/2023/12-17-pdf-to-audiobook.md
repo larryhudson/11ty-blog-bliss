@@ -19,7 +19,7 @@ potential here. If you like listening to long-form content, then I think this
 method is worth exploring.
 
 In this post, I'll walk through how I'm using these APIs to turn a scanned PDF
-into an audiobook. For each part, I'll share a NodeJS code example.
+into an audiobook. For each part, I'll share a Node.js code example.
 
 ## Extracting text from a PDF using the Document Intelligence API
 
@@ -47,7 +47,7 @@ A few things to note here:
   so I only extracted text from the pages that I needed.
 
 <details>
-  <summary>NodeJS code example for extracting text from a PDF</summary>
+  <summary>Node.js code example for extracting text from a PDF</summary>
   <div>
 
 ```js
@@ -259,7 +259,7 @@ A couple of things to keep in mind here:
 - As anything with untrusted input, [prompt injection](https://simonwillison.net/series/prompt-injection/) is a possibility - if you are extracting text from a document that is telling a robot to do something, that may trip up GPT-4.
 
 <details>
-  <summary>NodeJS code example for correcting text with GPT-4</summary>
+  <summary>Node.js code example for correcting text with GPT-4</summary>
   <div>
 
 ```js
@@ -362,7 +362,7 @@ to break our text into chunks, get audio for each chunk, and then join the
 chunks together.
 
 <details>
-  <summary>NodeJS code example for converting text to speech</summary>
+  <summary>Node.js code example for converting text to speech</summary>
   <div>
 
 ```js
@@ -466,14 +466,21 @@ quickly.
 Rather than converting a full book PDF in one go, I have been splitting up the
 PDF into chapters. That way, I can create audio for chapters as I get to them.
 
-Below is a NodeJS code example for creating a smaller PDF from a PDF, using the
+Below is a Node.js code example for creating a smaller PDF from a PDF, using the
 'start' and 'end' page numbers. a PDF into chapters. It uses the
 `pdf-lib` library to create a new PDF using the start and end page numbers, and
 allows me to set a 'page number offset' in the case the page number in the
 bottom corner of the page doesn't line up with the actual page number.
 
+If I wanted to extract pages 20 to 30 from a PDF, and page 20 is page 25 in the PDF, I could use the script this way use the
+script like this:
+`node extract-pages-from-pdf.js ./my-pdf.pdf 20 30 5`
+
+That would save a new PDF called `my-pdf_pages_20_to_30.pdf`, ready for
+extraction.
+
 <details>
-  <summary>NodeJS code example for extracting pages from a big PDF into a
+  <summary>Node.js code example for extracting pages from a big PDF into a
     smaller PDF</summary>
   <div>
 
