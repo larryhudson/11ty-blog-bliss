@@ -2,7 +2,7 @@
 title: Using Weaviate's generative search for brainstorming
 description: How combining vector search with a large language model can be a powerful tool for brainstorming.  
 openGraphImage: /images/astro-weaviate-brainstorm-banner.png
-customPermalink: /astro-weaaviate-brainstorm/
+customPermalink: /astro-weaviate-brainstorm/
 date: 2024-02-10
 tags:
   - programming
