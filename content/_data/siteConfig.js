@@ -127,7 +127,7 @@ module.exports = {
   // Default settings for Twitter graph tags
   // ---------------------------------------------------------------------------
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     image: '/icon-512.png',
     creator: '@larryhudsondev',
     site: '@larryhudsondev',

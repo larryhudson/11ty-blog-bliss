@@ -4,7 +4,9 @@
 {%- set twitter = siteConfig.twitter -%}
 
 {%- set ogImage -%}
-  {%- if image -%}
+  {%- if openGraphImage -%}
+  {{ openGraphImage | alwaysProductionUrl }}
+  {%- elif image -%}
     {%- set openGraphImage  -%}
       {%- resizedImage image.src, 1200, 630 -%}
     {%- endset -%}

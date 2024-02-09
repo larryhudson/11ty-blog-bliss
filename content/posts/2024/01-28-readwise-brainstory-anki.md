@@ -1,6 +1,7 @@
 ---
 title: Active reading with Readwise, Brainstory and Anki
 description: How these apps can help you read more actively, think deeper about ideas and retain more information from what you're reading.
+openGraphImage: /images/reading-readwise-brainstory-anki-banner.png
 customPermalink: /active-reading-readwise-brainstory-anki/
 date: 2024-01-28
 tags:
