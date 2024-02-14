@@ -53,4 +53,4 @@ It's worth noting that it is still early days for AI in the workplace. As time g
 
 I think it's fascinating to think about how AI tools are changing the way we work.
 
-If this is interesting to you, feel free to reach out on Twitter or LinkedIn. I'd love to hear what you think, and if you have any tips for using AI tools to help you think better.
+If this is interesting to you, feel free to reach out on [LinkedIn](https://www.linkedin.com/in/larryhudson4/) or [Twitter](https://twitter.com/larryhudsondev). I'd love to hear what you think, and if you have any ideas for using AI tools to help you think better.
