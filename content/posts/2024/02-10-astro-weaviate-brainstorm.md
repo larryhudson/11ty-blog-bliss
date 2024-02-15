@@ -57,4 +57,4 @@ I've also recorded a video walkthrough where I talk through the idea and demonst
 
 I'm keen to hear if this concept is interesting to you, and if you have any ideas for how it could be used. I think generative search could be a really powerful tool for brainstorming, and I'm excited to explore it further.
 
-If this idea is interesting to you, feel free to share it on Twitter or LinkedIn. 
+If this idea is interesting to you, feel free to share it on [Twitter](https://twitter.com/larryhudsondev/status/1756086534602883464) or [LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7161871407037997056/). 
