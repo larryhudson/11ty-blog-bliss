@@ -13,7 +13,7 @@ tags:
  I thought this was a great insight from Ethan's article: 
 > When a middle manager writes a weekly report on the status of a major initiative, the report may not be the point. Instead, it serves as a signal that the middle manager has done their job, speaking to the relevant employees, keeping an eye on the status of the project, and making corrections as needed. And it has always worked well enough - a senior manager could tell at a glance if the report was seemingly substantive (showing effort) and well-written (showing quality). But now every employee with Copilot can produce work that checks all the boxes of a formal report without necessarily representing underlying effort.
 
-I've been thinking about the implications of this. In this blog post, I want to focus on how AI tools can help us do better thinking, rather than skip thinking. 
+I think this is a big deal - while previously the 'output' (the report or summary) was proof of underlying thinking, now these outputs can be generated without much thinking at all. While these AI tools allow us to jump straight to the end result, they work better when we do more thinking and give them more context. In this blog post, I want to focus on how AI tools can help us do better thinking, rather than skip thinking. 
 
 ## Thinking and output
 
