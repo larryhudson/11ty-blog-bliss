@@ -1,8 +1,8 @@
 ---
 title: How can we use AI to do better thinking, not skip thinking?
-description: How can we use AI to do better thinking, not skip thinking? 
-openGraphImage: /images/astro-weaviate-brainstorm-banner.png
-customPermalink: /ai-thinking-and-generation/
+description: AI can help us jump straight to the output, but it can also help us think deeper. 
+openGraphImage: /images/ai-thinking-and-output.png
+customPermalink: /ai-thinking-and-output/
 date: 2024-02-15
 tags:
   - ai
