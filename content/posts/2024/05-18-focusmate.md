@@ -3,7 +3,7 @@ title: Focusmate feels like a magic trick for my brain
 description: I wrote an article for the Information Access Group newsletter about the benefits of text-to-speech for readers and content authors.
 customPermalink: /focusmate/
 openGraphImage: /images/focusmate.png
-date: 2024-03-18
+date: 2024-05-18
 tags:
   - productivity
   - motivation
