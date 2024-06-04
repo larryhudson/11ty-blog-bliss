@@ -1,5 +1,5 @@
 .post-list {
-  ul {
+  ul.no-bullets {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -17,6 +17,11 @@
 
     @include mobile {
       margin-top: 3rem;
+    }
+
+    li {
+      margin-top: 0.25rem;
+      margin-bottom: 0.25rem;
     }
 
     header {
@@ -47,9 +52,9 @@
 
   a:hover,
   a:focus {
-    .post-title {
-      text-decoration: underline;
-    }
+    // .post-title {
+    //   text-decoration: underline;
+    // }
 
     .read-more {
       .arrow {

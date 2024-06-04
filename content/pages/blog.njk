@@ -1,15 +1,18 @@
 ---
 layout: base
-eleventyExcludeFromCollections: true
+title: Blog
 pagination:
   data: collections.publishedPosts
   size: 10
   alias: posts
-permalink: "{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber + 1 }}{% endif %}/index.html"
+eleventyNavigation:
+  key: Blog
+  order: 1
+permalink: "/blog{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber + 1 }}{% endif %}/index.html"
 ---
 
 <div class="post-list">
-  <ul>
+  <ul class="no-bullets">
   {% for post in posts %}
     <li>
       {% include "partials/single-post-excerpt.njk" %}

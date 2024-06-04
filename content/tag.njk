@@ -14,7 +14,7 @@ pagination:
 <h1>{{ phrases.articles_tagged_as }} "{{ tag.title }}"</h1>
 
 <div class="post-list">
-  <ul>
+  <ul class="no-bullets">
   {% for post in tag.items %}
     <li>
       {% include "partials/single-post-excerpt.njk" %}

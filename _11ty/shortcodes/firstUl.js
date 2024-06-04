@@ -1,4 +1,5 @@
 const moduleName = require('../helpers/moduleName');
+const cheerio = require('cheerio');
 
 const body = (article) => {
   if (!Object.prototype.hasOwnProperty.call(article, 'templateContent')) {
@@ -9,9 +10,17 @@ const body = (article) => {
   }
 
   const content = article.templateContent;
-  const excerpt = content.slice(0, content.indexOf('\n'));
+  const $ = cheerio.load(content);
 
-  return excerpt.replace(/(<([^>]+)>)/gi, '');
+  const firstUl = $('ul').first();
+
+  if (firstUl) {
+    const html = firstUl.prop('outerHTML');
+    return html;
+  }
+
+  console.warn('Failed to extract first UL: Document has no UL');
+  return null;
 };
 
 module.exports = {

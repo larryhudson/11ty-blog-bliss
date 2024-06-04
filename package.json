@@ -31,6 +31,7 @@
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "cheerio": "^1.0.0-rc.12",
     "crypto-js": "^4.1.1",
     "eleventy-plugin-emoji": "^1.1.0",
     "eleventy-plugin-gen-favicons": "^1.1.2",

@@ -188,6 +188,8 @@ module.exports = {
     readable: 'd LLL yyyy',
     // Example: 1 October 1970
     fullReadable: 'd LLLL yyyy',
+    // Example: October 1970
+    monthYear: 'LLLL yyyy',
   },
   // ---------------------------------------------------------------------------
   // Settings for RSS feeds (Atom)
