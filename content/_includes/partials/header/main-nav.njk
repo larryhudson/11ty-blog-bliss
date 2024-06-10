@@ -9,7 +9,7 @@
   </div>
   <ul class="site-links">
   {% for item in navPages %}
-  <li{% if item.url === page.url %} class="active" aria-current="page"{% endif %}>
+  <li{% if item.url === page.url or eleventyNavigation.parent == item.key %} class="active" aria-current="page"{% endif %}>
     <a href="{{ item.url }}">
       {{ item.key }}
     </a>
