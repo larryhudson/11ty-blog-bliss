@@ -25,6 +25,8 @@
 {%- set pageTitle -%}
   {%- if tag -%}
     {{ tag.title|capitalizeAllWords }}{% if tag.currentPage >= 2 %} - {{ phrases.page }} {{ tag.currentPage }} {{ phrases.of }} {{ tag.totalPages }}{% endif %} - {{ siteTitle }}
+  {%- elif title == siteTitle -%}
+    {{ siteTitle }}
   {%- elif title -%}
     {{ title | safe }} - {{ siteTitle }} 
   {%- else -%}

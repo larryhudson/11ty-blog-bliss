@@ -1,9 +1,7 @@
 ---
 title: Portfolio
 description: There are many variations of passages of Lorem Ipsum available.
-eleventyNavigation:
-  key: Portfolio
-  order: 1
+permalink: false
 ---
 
 To do list for portfolio / resume:

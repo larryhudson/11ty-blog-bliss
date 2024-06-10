@@ -5,6 +5,7 @@ openGraphImage: /images/image.png
 customPermalink: /projects/docx-database/
 date: 2019-11-01
 stack: Django, Python
+published: false
 ---
 
 Summary:

@@ -11,7 +11,7 @@ Summary:
 - When we create an Easy Read PDF at the Information Access Group, we must do a few manual tweaks to the PDF in Acrobat, including manipulating the order of tags.
 - I worked out how to automate some of these tasks using the pdfassembler NPM library.
 
-## Why I did this project, why it's exciting
+## Background context
 - At the Information Access Group, when we are creating an Easy Read document in
 Microsoft Word, we use a table structure to lay out images and text side by side. This isn't ideal because when you
 export a PDF, the content is in a table tag, even though it is not an accessible
@@ -25,7 +25,9 @@ inside the table structure, dragging it out of the table tag, and deleting the
 table tag. 
 - While this was tedious, it gave me time to think about how we could make this process
 more efficient.
-- I found an NPM library called 'pdfassembler' that would allow you to
+
+## Manipulating PDFs with pdfassembler
+- I found an NPM library called [pdfassembler](https://github.com/DevelopingMagic/pdfassembler) that would allow you to
 manipulate the structure of a PDF file using JavaScript. This allowed me to work
 out how to process a PDF and automate repetitive tasks.
 - To do this in a reliable way, I needed to learn quite a bit about how PDFs

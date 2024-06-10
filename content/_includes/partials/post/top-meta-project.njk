@@ -1,0 +1,13 @@
+{%- set wordCount -%}{{ content | striptags | wordcount }}{%- endset -%}
+{%- set readingTime -%}{{ wordCount | readingTimeMin }}{%- endset -%}
+<div class="top-meta">
+  <time>{{ date|readableMonthYear }}</time>
+{% if stack %}
+<span class="separator">{{ phrases.meta_separator }}</span>
+<span>{{ stack }}</span>
+{% endif %}
+{% if githubRepo %}
+<span class="separator">{{ phrases.meta_separator }}</span>
+<span><a href="{{ githubRepo }}">GitHub repo</a></span>
+{% endif %}
+</div>

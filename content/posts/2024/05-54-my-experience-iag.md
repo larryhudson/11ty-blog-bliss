@@ -2,6 +2,7 @@
 title: My experience at the Information Access Group
 description: I wrote an article for the Information Access Group newsletter about the benefits of text-to-speech for readers and content authors.
 customPermalink: /my-experience-at-iag/
+published: false
 date: 2024-05-24
 tags:
   - career

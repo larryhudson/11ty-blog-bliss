@@ -50,11 +50,11 @@
     }
   }
 
-  a:hover,
-  a:focus {
-    // .post-title {
-    //   text-decoration: underline;
-    // }
+  a.wrapping-link:hover,
+  a.wrapping-link:focus {
+    .post-title {
+      text-decoration: underline;
+    }
 
     .read-more {
       .arrow {

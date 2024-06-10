@@ -31,7 +31,10 @@ big playlist.
 - Using the Spotify API, it would get your recent top artists, and then make a
 list of genres related to those artists. 
 - You would create a mix by choosing the genres you're interested in.
-- You could choose what type of playlists you wanted to include - the 
+- You could choose the types of playlist you wanted to include, for example
+'Sound', 'Pulse', or 'Edge'.
+- When you click 'create', it would create a new playlist in your Spotify
+account, and add all the tracks from the matching Every Noise at Once playlists.
 
 ## How I made it
 - For this project, I used the static site generator Eleventy. This allowed me

@@ -1,7 +1,7 @@
 {%- set wordCount -%}{{ post.templateContent | striptags | wordcount }}{%- endset -%}
 {%- set readingTime -%}{{ wordCount | readingTimeMin }}{%- endset -%}
 {%- set postDate -%}{{ post.data.date|readableDate }}{%- endset -%}
-<a href="{{ post.url }}">
+<a class="wrapping-link" href="{{ post.url }}">
   <article>
     <header>
       <h2 class="post-title">{{ post.data.title }}</h2>

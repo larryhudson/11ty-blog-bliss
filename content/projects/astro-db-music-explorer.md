@@ -45,12 +45,14 @@ build some of these out, I ran into some tricky issues.
 - As Astro DB is quite a new library, and it is a fairly simple implementation
 of SQLite, you need to implement features like authentication and authorisation
 yourself.
-- I was able to implement authentication using Lucia, but after looking at more
-  mature frameworks like Laravel, it feels like with Astro DB, you need to write
-  a lot of boilerplate to hook things up properly.
+- I was able to implement authentication using Lucia, but in order to implement
+more complex permissions (eg. collaboration on playlists), it feels like quite a lot of work to do yourself. It seems like more 'batteries-included' frameworks like Laravel make this easier. 
+
+## Future ideas
 - If I continue building this app, I will probably switch to something like
 Laravel that handles more of the authentication and authorisation for me. That
 way, I can focus on the unique value of the app rather than tripping myself up
-with boilerplate.
-
-## Future ideas
+with complex database schemas etc.
+- I want to explore building more social features, as I feel like this is
+something that Spotify is missing. Being able to send music to your friends and
+discover new music together is exciting to me.

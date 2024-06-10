@@ -1,13 +1,12 @@
 ---
 title: Larry Hudson
+heading: Hi, I'm Larry.
 description: There are many variations of passages of Lorem Ipsum available.
 customPermalink: /index.html
 ---
 
 <img src="/images/Larry_366.jpg" alt="Larry smiling. Larry is a white man in his
 late twenties, with short brown hair, a slightly patchy beard and round glasses." class="myphoto" />
-
-I'm {{ siteConfig.author.name }}. Welcome to my website!
 
 I'm an Australian full stack engineer based in Paris, France.
 
