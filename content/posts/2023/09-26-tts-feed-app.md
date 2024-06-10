@@ -7,8 +7,6 @@ tags:
   - programming
   - podcasts
   - projects
-disclaimer:
-  text: This is a draft.
 ---
 
 - I've been working on an app idea that has been in the back of my mind for a
@@ -22,7 +20,7 @@ disclaimer:
   combinations of frameworks, languages and deployment options. But I've finally
   landed on a solution that I'm happy with.
 
-## `astro-sqlite-tts-feed`
+## astro-sqlite-tts-feed
 
 - It's an Astro web app, backed by a SQLite database and BullMQ for handling
   background tasks. I'm using the Azure TTS API for the text to speech. It's

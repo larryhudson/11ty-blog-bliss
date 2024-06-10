@@ -1,0 +1,24 @@
+{%- set wordCount -%}{{ post.templateContent | striptags | wordcount }}{%- endset -%}
+{%- set readingTime -%}{{ wordCount | readingTimeMin }}{%- endset -%}
+{%- set postDate -%}{{ post.data.date|readableMonthYear }}{%- endset -%}
+  <article>
+    <header>
+    <a href="{{ post.url }}">
+    <h2 class="post-title">{{ post.data.title }}</h2>
+    </a>
+    </header>
+    <div class="excerpt"> 
+      {% firstUl post %}
+    </div>
+    <div class="post-meta">
+        <time>{{ postDate }}</time>
+        {% if post.data.stack %}
+           <span class="separator">{{ phrases.meta_separator }}</span>
+            <span>{{ post.data.stack }}</span>
+        {% endif %}
+        {% if post.data.githubRepo %}
+        <span class="separator">{{ phrases.meta_separator }}</span>
+            <span><a href="{{ post.data.githubRepo }}">GitHub repo</a></span>
+        {% endif %}
+    </div>
+  </article>

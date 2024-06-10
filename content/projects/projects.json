@@ -1,0 +1,10 @@
+{
+  "layout": "project",
+  "tags": [
+    "project"
+  ],
+  "permalink": "{% if customPermalink %}{{ customPermalink }}{% else %}/{{ title | slugify }}/{% endif %}",
+  "language": "en",
+  "published": true,
+  "ogType": "article"
+}
