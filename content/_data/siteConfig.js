@@ -92,6 +92,10 @@ module.exports = {
   // ---------------------------------------------------------------------------
   metaPages: [
     {
+      url: 'https://www.linkedin.com/in/larryhudson4/',
+      title: 'LinkedIn',
+    },
+    {
       url: 'https://github.com/larryhudson/',
       title: 'GitHub',
     },
