@@ -1,18 +1,22 @@
 ---
-title: Easy Read HTML product for Information Access Group
+title: Easy Read HTML with Eleventy and Azure AI Speech
 description: description
-openGraphImage: /images/image.png
 customPermalink: /projects/easy-read-html/
-date: 2021-01-01
-stack: Eleventy, Astro, Azure TTS
-published: false
+date: 2022-07-01
+stack: Eleventy, Azure AI Speech
 ---
 
 Summary:
-- Summary goes here
-- Unsure about the date for this
+- Traditionally Easy Read documents are published as PDF files online, but this
+  isn't ideal for accessibility or usability 
+- Using the static site generator Eleventy, I set up a process for turning Microsoft Word working files into accessible HTML
+versions that work better on mobile, are faster to produce and work better for
+assistive technology users.
+- Using the Azure AI Speech API, I added the ability to generate an audio
+version that would highlight the text as it is read out.
 
-## Why I did this, why it's exciting
+## Background context
+
 - At my previous workplace the [Information Access Group](https://www.informationaccessgroup.com/) (IAG), they specialise in
 making Easy Read documents - rewriting complex information using simple language
 and using vector icons and stock images to illustrate the meaning.
@@ -29,54 +33,22 @@ not a good format for document accessibility and usability:
 technology, I was keen to work out a way to publish our Easy Read documents as
 HTML webpages.
 
-## Converting Word documents to HTML
-- Microsoft Word is a surprisingly effective format when it comes to generating
-  HTML. One reason for this is that the Microsoft Word `.docx` format is based
-on XML, so it's relatively straightforward for tools to convert `.docx` to
-`.html`.
-- I found the npm library [mammoth](https://www.npmjs.com/package/mammoth) which makes it easy to convert .docx files to clean HTML.
-- I used the static site generator Eleventy to prepare a static HTML webpage
-- I used CSS variables to make it possible to apply the client's specific brand
-  styles, including colours and fonts, to the HTML version.
-- I created an Eleventy plugin [eleventy-plugin-docx](https://github.com/larryhudson/eleventy-plugin-docx) that makes it straightforward to use `.docx`
-files as content in an Eleventy site.
+## Turning Word documents into HTML with Eleventy
 
-## Adding the 'listen' button with Azure TTS
-- Why an audio version is important - empowering people with disability to
-engage with the content more independently.
-- This is a good example of what you can do with webpages, versus traditional
-document formats like PDF and Word. There's no limit to what you
-- How we did it - added another plugin to Eleventy that takes the rendered HTML
-  page content, converts to text then gets the audio
-- Tricky thing - adding 
+- I investigated ways to turn Microsoft Word documents into HTML webpages. Because the ‘docx’ format is based on XML, it is quite a good format for turning into HTML while maintaining the semantic information in the source file. Eg. if you use paragraph styles consistently, these can come through to the HTML as semantic markup.
+- I started using a JavaScript static site generator called [Eleventy](https://www.11ty.dev/) to prepare static HTML webpages from the Word working files. Eleventy would generate a static folder of HTML files, making it easy to supply to our clients as a packaged zip file, or host using a static web host like [Netlify](https://www.netlify.com).
+- I created an Eleventy plugin called eleventy-plugin-docx, using the ‘mammoth’ npm library under the hood, to make it possible to use docx files as input in an Eleventy project.
+- Using CSS variables, I set up a template that would make it easy to apply our clients’ brand styles to the HTML, including brand fonts and colours.
+    
+## Generating audio with Azure AI Speech API
+    
+I became interested in using a text to speech API to prepare an audio version of the content. While people who use assistive technology can listen to the document using a screen reader, the main target audience for Easy Read content is people with low literacy levels and people with intellectual disability, who may not use assistive technology. By integrating an audio version with an easy-to-use interface, there was potential to make it easier for the target audience to engage with Easy Read documents independently.
 
-## Hosting static webpages on Netlify
-- When we are creating HTML, we can either give the client a packaged HTML
-folder for them to publish themselves, or we can host the webpage for them.
-- If we are hosting the webpage for them, we use Netlify.
-- Because Netlify makes it so easy to publish a static website, there is not
-really a difference in the amount of work we need to do, compared to supplying a
-static HTML folder
+I used Microsoft’s Azure AI Speech API to generate an audio version of the HTML content. To do this, I needed to overcome a few technical challenges:
+- using caching to only re-generate the audio if the content changed (because the Speech API is slow and expensive).
+- breaking up the content into multiple chunks, because the Speech API has a 10-minute limit per request
+- writing clientside JavaScript that highlights the text as it reads out. The Speech API returns word-level timestamps, but I needed to figure out how to manipulate the HTML content to break up the words into `<span>` elements that could be highlighted as the text is read out.
 
-## Making a 'HTML builder' web app with Astro and Eleventy's programmatic API
-- Using Eleventy to generate a static site is great, but we wanted to make it
-possible for other team members to generate HTML versions. We can't expect all
-team members to set up a Node.js development environment, in order to run the
-`npm run build` command to
-- Eleventy has a programmatic API, which means you can run builds from within
-other web applications.
-- We created an Astro web app, connected to a background task queue powered by
-Redis and Bullmq. In one of the background tasks, we set up the functionality to
-execute an Eleventy build using a supplied source .docx file and a supplied
-template.
-- Inside the web app, we made it possible to create client-specific themes,
-allowing the user to choose fonts and brand colours.
-- Using the Netlify API, we made it possible to create a new site and deploy by
-  clicking one button, after 
-- This web app reduced bottlenecks as it allowed other team members to get
-involved creating HTML versions of documents, not just relying on the team
-members who were comfortable with the command line. 
-- It also lowered the barrier for other team members to learn about HTML. We
-added interactive checklists that help team members create HTML and review the
-files before they get sent to the client. This helped team members gain an
-understanding of how HTML, CSS and JavaScript work together.
+I’m really proud of the Easy Read HTML product that I was able to help build at the Information Access Group. I think it’s a great example of what you can do when you publish information in a ‘web-first’ way, rather than using traditional document formats.
+
+<!-- TODO: insert a link to Easy Read HTML builder case study when that's done -->
