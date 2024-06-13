@@ -4,18 +4,11 @@ const pluginRss = require('@11ty/eleventy-plugin-rss');
 const { EleventyHtmlBasePlugin } = require('@11ty/eleventy');
 const pluginEmoji = require('eleventy-plugin-emoji');
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
-const srcSet = require('./plugins/srcset');
 const pluginPWA = require('eleventy-plugin-pwa-v2');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const faviconsPlugin = require('eleventy-plugin-gen-favicons');
 
-const productionPlugins = IS_PRODUCTION
-  ? [
-      {
-        body: srcSet,
-      },
-    ]
-  : [];
+const productionPlugins = IS_PRODUCTION ? [] : [];
 
 const pwaPluginConfig = siteConfig.enablePWA
   ? [
