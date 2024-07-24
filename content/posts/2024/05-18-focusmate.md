@@ -51,6 +51,7 @@ My motivation comes and goes in waves, so it will be interesting to see how Focu
 
 I’m making a reminder for myself in a months’ time (18 June 2024) to add an update to this post.
 
+
 ## Give it a try
 
 I don’t think Focusmate is for everyone. Everyone has different things that motivate them. If you don’t struggle with motivation or procrastination, then you probably don’t need to try it.
@@ -62,3 +63,20 @@ If you ever struggle with these issues, I would strongly recommend giving Focusm
 You can [use my referral link here to get one month of unlimited sessions for free](https://focusmate.com/?fmreferral=6nPt0Mr3sw).
 
 I’m keen to hear what you think. You can [email me at larryhudson@hey.com](mailto:larryhudson@hey.com).
+
+## Update after a couple of months
+
+It's now Wednesday 24 July 2024 - a couple of months after I wrote this post. It took me a while to get around to writing this update.
+
+In the last month or so, I haven't been using Focusmate as much as I did when it
+was new to me. The novelty factor has worn off, so it takes more effort for me
+to book in sessions now.
+
+However, on the days where I use Focusmate, I feel more productive and focused.
+It's easier for me to make progress on the things that I need to do, and stay
+'on the rails', versus when I am just motivating myself.
+
+The challenge for me now is to have the discipline to reach for Focusmate and use
+it consistently. The difficult thing is, when I need Focusmate the most (when I
+am feeling unproductive), is when my brain is not reaching for it. So I need to
+work on that.
