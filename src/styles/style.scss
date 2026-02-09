@@ -1,7 +1,8 @@
-@import 'fonts';
-@import 'mixins';
-@import 'variables';
-@import 'vendors';
-@import 'normalize';
-@import 'partials';
-@import 'pages';
+@use 'fonts';
+@use 'mixins';
+@use 'variables';
+@use 'variable-styles';
+@use 'vendors';
+@use 'normalize';
+@use 'partials';
+@use 'pages';

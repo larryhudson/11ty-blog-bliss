@@ -1,3 +1,5 @@
+@use "../mixins";
+
 .footer {
   margin: 4rem 0 3rem;
   border-top: 1px solid var(--footer-separator-color);
@@ -73,7 +75,7 @@
   }
 }
 
-@include aboveFooterBreakpoint {
+@include mixins.aboveFooterBreakpoint {
   .footer .links {
     flex-direction: column;
 

@@ -1,0 +1,34 @@
+@use "variables";
+
+:root {
+  --base-font-size: #{variables.$baseSize};
+  --spacing: #{variables.$spacing};
+  --text-font-family: #{variables.$serifFontFamily};
+  --serif-bold-font-family: #{variables.$serifBoldFontFamily};
+  --serif-italic-font-family: #{variables.$serifItalicFontFamily};
+  --serif-bold-italic-font-family: #{variables.$serifBoldItalicFontFamily};
+  --arial-font-family: #{variables.$arialFamily};
+  --emoji-font-family: #{variables.$emojiFontFamily};
+  --heading-font-family: #{variables.$sansSerifFontFamily};
+  --read-more-hover-color: #{variables.$white};
+  --base-color: #{variables.$baseColor};
+  --default-transition-time: #{variables.$defaultTransitionTime};
+  --long-transition-time: #{variables.$longTransitionTime};
+}
+
+:root,
+html:not(.dark) {
+  @include variables.lightModeColors;
+}
+
+html.dark {
+  @include variables.darkModeColors;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root,
+  html:not(.light),
+  html.dark {
+    @include variables.darkModeColors;
+  }
+}
