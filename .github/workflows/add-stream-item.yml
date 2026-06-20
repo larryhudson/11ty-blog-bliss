@@ -13,6 +13,10 @@ on:
         description: Short take / description
         required: false
         default: ''
+      title:
+        description: Title (optional; detected from the page if omitted)
+        required: false
+        default: ''
       type:
         description: reading or building
         required: false
@@ -37,6 +41,7 @@ jobs:
         env:
           URL: ${{ inputs.url }}
           DESCRIPTION: ${{ inputs.description }}
+          TITLE: ${{ inputs.title }}
           TYPE: ${{ inputs.type }}
         run: node scripts/new-stream-item.mjs
 

@@ -40,6 +40,8 @@ Make a new Shortcut with these actions:
        - `url` (Text): the Shortcut Input / URL from step 1
        - `description` (Text): the answer from step 2
        - `type` (Text): `reading`
+       - `title` (Text, optional): leave empty to use the page's detected title,
+         or pass your own to override it
 4. (Optional) **Show Notification**: "Reading item submitted".
 
 A successful dispatch returns `204 No Content`. The workflow then runs and opens a draft
