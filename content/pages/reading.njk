@@ -1,0 +1,10 @@
+---
+layout: post-list
+title: Reading
+pagination:
+  data: collections.readingPosts
+  size: 10
+eleventyNavigation:
+  parent: Blog
+permalink: "/reading{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber + 1 }}{% endif %}/index.html"
+---

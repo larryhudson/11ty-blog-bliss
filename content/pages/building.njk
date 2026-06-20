@@ -1,0 +1,10 @@
+---
+layout: post-list
+title: Building
+pagination:
+  data: collections.buildingPosts
+  size: 10
+eleventyNavigation:
+  parent: Blog
+permalink: "/building{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber + 1 }}{% endif %}/index.html"
+---

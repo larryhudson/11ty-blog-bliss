@@ -1,0 +1,24 @@
+---
+layout: base
+---
+
+{% include "partials/stream-subnav.njk" %}
+
+<div class="post-list">
+  <ul class="no-bullets">
+  {% for post in pagination.items %}
+    <li>
+      {% include "partials/single-post-excerpt.njk" %}
+    </li>
+  {% endfor %}
+  </ul>
+</div>
+
+{% include "partials/scroll-up-arrow.njk" %}
+
+{%- set totalPages = pagination.pages|length -%}
+{%- set currentPage = pagination.pageNumber + 1 -%}
+{%- set previousHref = pagination.href.previous -%}
+{%- set nextHref = pagination.href.next -%}
+
+{% include "partials/pagination.njk" %}

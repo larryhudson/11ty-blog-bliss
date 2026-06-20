@@ -1,0 +1,13 @@
+{%- set subnavItems = [
+  { label: "All", url: "/blog/" },
+  { label: "Writing", url: "/writing/" },
+  { label: "Reading", url: "/reading/" },
+  { label: "Building", url: "/building/" }
+] -%}
+<nav class="stream-subnav" aria-label="Filter posts by type">
+  <ul>
+  {%- for item in subnavItems %}
+    <li{% if item.url in page.url %} class="active" aria-current="page"{% endif %}><a href="{{ item.url }}">{{ item.label }}</a></li>
+  {%- endfor %}
+  </ul>
+</nav>
