@@ -10,6 +10,7 @@ eleventyExcludeFromCollections: true
 {%- include "partials/feeds/rss/feed-meta.njk" -%}
 {%- for post in collections.publishedPosts|limit(postLimit) -%}
 {%- set absolutePostUrl -%}{{ post.url | alwaysProductionUrl }}{%- endset -%}
+{%- set entryUrl = post.data.externalUrl or absolutePostUrl -%}
 {%- set content = post.templateContent -%}
 <entry>
 {%- include "partials/feeds/rss/entry-meta.njk" -%}

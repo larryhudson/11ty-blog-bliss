@@ -11,9 +11,26 @@ layout: base
   {% include "partials/post/image.njk" %}
 
   <header>
+    {%- if type -%}
+    <p class="post-type post-type--{{ type }}">
+      {%- if type == "reading" -%}📚 Reading
+      {%- elif type == "building" -%}🔨 Building
+      {%- else -%}{{ type | capitalize }}
+      {%- endif -%}
+    </p>
+    {%- endif -%}
+    {%- if externalUrl -%}
+    <h1 class="external-post"><a href="{{ externalUrl }}" target="_blank" rel="noopener noreferrer">
+      {%- if type == "reading" -%}<em>&ldquo;{{ title }}&rdquo;</em>{%- else -%}{{ title }}{%- endif -%}
+      <span class="external-arrow" aria-hidden="true"> ↗</span></a></h1>
+    {%- else -%}
     <h1>{{ title }}</h1>
+    {%- endif -%}
   </header>
   {% include "partials/post/top-meta.njk" %}
+  {%- if externalUrl -%}
+  <p class="external-link"><a href="{{ externalUrl }}" target="_blank" rel="noopener noreferrer">{{ externalUrl | replace("https://", "") | replace("http://", "") }} ↗</a></p>
+  {%- endif -%}
   {% include "disclaimers/disclaimer.njk" %}
   {{ content | safe }}
 </article>

@@ -1,5 +1,8 @@
 "id": "{{ absolutePostUrl }}",
-"url": "{{ absolutePostUrl }}",
+"url": "{{ entryUrl }}",
+{%- if post.data.externalUrl %}
+"external_url": "{{ post.data.externalUrl }}",
+{%- endif %}
 "title": "{{ post.data.title }}",
 "date_published": "{{ post.date | dateToRfc3339 }}",
 "language": "{{ siteConfig.language }}",
