@@ -13,6 +13,8 @@ const url = (process.env.URL || '').trim();
 const description = (process.env.DESCRIPTION || '').trim();
 const type = (process.env.TYPE || 'reading').trim();
 const providedTitle = (process.env.TITLE || '').trim();
+// Accept a boolean either as a real boolean or a "true"/"1"/"yes" string.
+const shouldPublish = /^(true|1|yes)$/i.test((process.env.SHOULD_PUBLISH || '').trim());
 
 if (!url) {
   console.error('URL is required (set the URL env var).');
@@ -105,6 +107,6 @@ if (process.env.GITHUB_OUTPUT) {
   const branch = `${type}-${dateStr}-${slug}`.slice(0, 80);
   await appendFile(
     process.env.GITHUB_OUTPUT,
-    `title=${title}\npath=${filepath}\nbranch=${branch}\nslug=${slug}\n`
+    `title=${title}\npath=${filepath}\nbranch=${branch}\nslug=${slug}\npublish=${shouldPublish}\n`
   );
 }

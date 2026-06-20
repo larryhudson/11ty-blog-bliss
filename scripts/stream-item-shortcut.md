@@ -42,6 +42,8 @@ Make a new Shortcut with these actions:
        - `type` (Text): `reading`
        - `title` (Text, optional): leave empty to use the page's detected title,
          or pass your own to override it
+       - `shouldPublish` (Boolean, optional): `true` merges the PR straight away
+         (publishes), anything else opens a draft to review first
 4. (Optional) **Show Notification**: "Reading item submitted".
 
 A successful dispatch returns `204 No Content`. The workflow then runs and opens a draft
