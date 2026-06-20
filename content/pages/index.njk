@@ -1,0 +1,30 @@
+---
+title: Larry Hudson
+heading: Hi, I'm Larry.
+description: Software engineer at CO2 AI, figuring out how engineering teams actually work with AI.
+customPermalink: /index.html
+---
+
+<img src="/images/Larry_2026.png" alt="Larry standing outdoors in front of green trees. Larry is a white man in his early thirties with short brown hair, a short beard and dark-framed glasses, wearing a light t-shirt and smiling slightly." class="myphoto" />
+
+<p>I'm an Australian software engineer based in London. I work at <a href="https://www.co2ai.com/">CO2 AI</a>, building tools that help large companies measure and cut their carbon emissions.</p>
+
+<p>Most of what I think about these days is how our work is changing now that we build software with AI. Over the last year I've helped my team go from a couple of us experimenting with coding agents to most of the team using them every day. I've been running training, building internal tooling, and dealing with the new challenges that arise when everyone is using agents.</p>
+
+<p>Things are changing so quickly that we need to be adaptable and open to change. Anyone who says they have the perfect workflow is underestimating how things will continue to change. So I try to keep up to date with the latest trends, find the patterns that will last, and drive change in my team.</p>
+
+<p>This site is where I share what I'm reading, what I'm building and what I'm thinking. Here's the latest.</p>
+
+<div class="post-list">
+  <ul class="no-bullets">
+  {% for post in collections.publishedPosts %}
+    {%- if loop.index <= 8 %}
+    <li>
+      {% include "partials/single-post-excerpt.njk" %}
+    </li>
+    {% endif -%}
+  {% endfor %}
+  </ul>
+</div>
+
+<p class="stream-more"><a href="/blog/">See more posts →</a></p>
