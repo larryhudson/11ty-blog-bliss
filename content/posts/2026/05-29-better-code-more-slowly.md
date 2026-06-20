@@ -11,4 +11,4 @@ tags:
 
 [Using AI to write better code more slowly](https://nolanlawson.com/2026/05/25/using-ai-to-write-better-code-more-slowly/) by Nolan Lawson.
 
-Worth a read for the title alone. The usual pitch for AI coding is speed, but the more interesting use is the opposite — using the time the agent frees up to be more careful, not to ship faster. That matches what I keep coming back to: the speed is real, but the value shows up in what you do with it.
+While this sounds like the right thing to do, it's a hard one to actually apply. It takes real discipline to slow down and focus on making one thing better, rather than spinning up a few more agents to knock out easy tasks. I need to find ways to build up that muscle.

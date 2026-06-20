@@ -10,7 +10,7 @@ tags:
   - side-project
 ---
 
-As agents write more and more of our code, the risk isn't that they can't write it — it's that they happily add complexity we'll have to live with later. They're good at adding things and not great at simplifying.
+Agents are great at writing code, and especially good at small, well-scoped tasks. The catch is they tend to focus on the task right in front of them, not the wider system or how maintainable it will be in a year. They're good at adding things and not so good at simplifying, so they happily pile on complexity we have to live with later.
 
 `minimise-complexity` is a Claude Code skill that gives the agent a lens for keeping things simple, both when designing something and when reviewing a change. It pulls together two sources I really like: [The Grug Brained Developer](https://grugbrain.dev/) and John Ousterhout's *A Philosophy of Software Design*. Both make the same argument — complexity is the enemy — so the skill nudges towards the simpler 80/20 option and flags things like shallow abstractions and over-DRYing.
 

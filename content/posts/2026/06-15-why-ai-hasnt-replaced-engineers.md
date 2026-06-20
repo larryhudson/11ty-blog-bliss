@@ -12,7 +12,7 @@ tags:
 
 [Why AI hasn't replaced software engineers, and won't](https://www.normaltech.ai/p/why-ai-hasnt-replaced-software-engineers) — a good, level-headed read.
 
-- It argues against the hype that AI will cause mass layoffs and be the "end of software engineering". The point I took: AI compresses the middle of the job (writing the code), but the deciding-what-to-build and being-accountable-for-it parts are still very much ours.
+- It argues against the hype that AI will cause mass layoffs and be the "end of software engineering". The framing I liked: the job is really decide, then execute, then deliver. AI mostly compresses the *execute* part (writing the code), so that slice of the pie shrinks and more of our time shifts to deciding what to build and being accountable for delivering it.
 - I had a bit of an "oh shit" moment last week watching Claude Fable crush hard problems in one shot, so I don't think any of this is settled. It really makes you think about where our work is heading.
 
-This is actually the piece that made me suggest we spend a tech weekly openly discussing how software engineering is changing — which we then did.
+It's the piece that pushed me to get my whole engineering team together to talk openly about how our work is changing, and that shift from execute towards decide and deliver is a big part of it.
