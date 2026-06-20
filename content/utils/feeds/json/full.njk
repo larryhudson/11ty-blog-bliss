@@ -12,6 +12,7 @@ eleventyExcludeFromCollections: true
   "items": [
     {%- for post in collections.publishedPosts|limit(itemLimit) -%}
     {%- set absolutePostUrl %}{{ post.url | alwaysProductionUrl }}{% endset -%}
+    {%- set entryUrl = post.data.externalUrl or absolutePostUrl -%}
     {
       {%- include "partials/feeds/json/item-meta.njk" -%}
       "content_html": "{%- include "partials/feeds/disclaimer.njk" -%}{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}"
