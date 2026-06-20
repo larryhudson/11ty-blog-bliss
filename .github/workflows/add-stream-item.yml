@@ -1,0 +1,57 @@
+name: Add stream item
+
+# Triggered from the Apple Shortcut via the GitHub API (workflow_dispatch).
+# Fetches the page title, writes a reading/building post, and opens a draft PR.
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: URL of the page to add
+        required: true
+      description:
+        description: Short take / description
+        required: false
+        default: ''
+      type:
+        description: reading or building
+        required: false
+        default: reading
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  add-item:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: Create stream item
+        id: create
+        env:
+          URL: ${{ inputs.url }}
+          DESCRIPTION: ${{ inputs.description }}
+          TYPE: ${{ inputs.type }}
+        run: node scripts/new-stream-item.mjs
+
+      - name: Open draft PR
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: ${{ steps.create.outputs.branch }}
+          draft: true
+          title: 'Add ${{ inputs.type }}: ${{ steps.create.outputs.title }}'
+          commit-message: 'Add ${{ inputs.type }} item: ${{ steps.create.outputs.title }}'
+          add-paths: content/posts/**
+          body: |
+            Auto-created from the Apple Shortcut.
+
+            - URL: ${{ inputs.url }}
+            - File: `${{ steps.create.outputs.path }}`
+
+            Edit the wording if you want, then mark it ready and merge.
