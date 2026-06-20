@@ -14,7 +14,8 @@ module.exports = {
     // OpenGraph tags and feeds.
     // It is also used as a fallback description if no custom description
     // is provided for a page / post.
-    description: 'Australian full stack engineer based in Paris, France',
+    description:
+      'Software engineer at CO2 AI, figuring out how engineering teams actually work with AI. Reading, building and thinking out loud.',
     // Production URL. Used by 'alwaysProductionUrl' filter.
     // If none is provided, relative paths will be used
     // and in some cases (like sitemap.xml) that is TOTALLY NOT what you want

@@ -1,5 +1,5 @@
 <ul class="archive">
-  {% for yearlyArchive in collections.publishedPosts | groupByYear %}
+  {% for yearlyArchive in collections.writingPosts | groupByYear %}
     <li>
     {# TODO: could replace with details/summary #}
       <h3 tabindex='0' class="year-heading" id="year-{{ yearlyArchive.year }}">

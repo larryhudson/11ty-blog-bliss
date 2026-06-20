@@ -1,0 +1,32 @@
+---
+title: Larry Hudson
+heading: Hi, I'm Larry.
+description: Software engineer at CO2 AI, figuring out how engineering teams actually work with AI. What I'm reading, building, and thinking.
+customPermalink: /index.html
+---
+
+<img src="/images/Larry_366.jpg" alt="Larry smiling. Larry is a white man who is thirty, with short brown hair, a slightly patchy beard and round glasses." class="myphoto" />
+
+<p>I'm an Australian software engineer based in London. I work at <a href="https://www.co2ai.com/">CO2 AI</a> on the Supplier Web team, building tools that help large companies measure and cut their carbon emissions.</p>
+
+<p>Most of what I think about these days is how our day-to-day work is changing now that we build software with AI. Over the last year I've helped my team go from a couple of us experimenting with coding agents to most of the team using them every day — running the training, building some of our internal tooling, and having a lot of the "okay, but how do we actually do this well?" conversations.</p>
+
+<p>I don't think anyone has this figured out yet, and when someone tells me they've got the perfect workflow I usually take it as a sign they're underrating how fast it's all still changing. So I try to stay close to the people doing the most interesting work, work out what actually holds up, and bring my team along with me.</p>
+
+<p>Outside of that, I'm a big music fan — you can see what I listen to on my <a href="https://last.fm/user/harryludson">Last.fm profile</a> or my <a href="https://bandcamp.com/harryludson">Bandcamp collection</a>. There's more of what I'm building on <a href="https://github.com/larryhudson">GitHub</a>.</p>
+
+<p>This site is where I think out loud: what I'm reading, what I'm building, and what I'm thinking. The latest is below.</p>
+
+<div class="post-list">
+  <ul class="no-bullets">
+  {% for post in collections.publishedPosts %}
+    {%- if loop.index <= 8 %}
+    <li>
+      {% include "partials/single-post-excerpt.njk" %}
+    </li>
+    {% endif -%}
+  {% endfor %}
+  </ul>
+</div>
+
+<p class="stream-more"><a href="/blog/">See more posts →</a></p>

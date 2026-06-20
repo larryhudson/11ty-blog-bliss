@@ -1,18 +1,57 @@
+{%- set postDate -%}{{ post.data.date|readableDate }}{%- endset -%}
+{%- set typeLabel -%}
+  {%- if post.data.type -%}
+  <p class="post-type post-type--{{ post.data.type }}">
+    {%- if post.data.type == "reading" -%}📚 Reading
+    {%- elif post.data.type == "building" -%}🔨 Building
+    {%- elif post.data.type == "thinking" -%}💭 Thinking
+    {%- else -%}{{ post.data.type | capitalize }}
+    {%- endif -%}
+  </p>
+  {%- endif -%}
+{%- endset -%}
+{%- if post.data.externalUrl -%}
+{%- set displayUrl = post.data.externalUrl | replace("https://", "") | replace("http://", "") -%}
+<a class="wrapping-link stream-item-compact" href="{{ post.data.externalUrl }}" target="_blank" rel="noopener noreferrer">
+  <article>
+    <header>
+      {{ typeLabel | safe }}
+      <h2 class="post-title">
+        {%- if post.data.type == "reading" -%}
+        <em class="reading-title">&ldquo;{{ post.data.title }}&rdquo;</em>
+        {%- else -%}
+        {{ post.data.title }}
+        {%- endif -%}
+        <span class="external-arrow" aria-hidden="true">↗</span>
+      </h2>
+    </header>
+    {%- if post.data.description -%}
+    <div class="excerpt">{{ post.data.description }}</div>
+    {%- endif -%}
+    <div class="post-meta">
+        <span class="external-url">{{ displayUrl }}</span>
+        <span class="separator">{{ phrases.meta_separator }}</span>
+        <time>{{ postDate }}</time>
+    </div>
+  </article>
+</a>
+{%- else -%}
 {%- set wordCount -%}{{ post.templateContent | striptags | wordcount }}{%- endset -%}
 {%- set readingTime -%}{{ wordCount | readingTimeMin }}{%- endset -%}
-{%- set postDate -%}{{ post.data.date|readableDate }}{%- endset -%}
 <a class="wrapping-link" href="{{ post.url }}">
   <article>
     <header>
+      {{ typeLabel | safe }}
       <h2 class="post-title">{{ post.data.title }}</h2>
     </header>
-    <div class="excerpt"> 
+    <div class="excerpt">
       {% excerpt post %}
     </div>
     <div class="post-meta">
         <time>{{ postDate }}</time>
         <span class="separator">{{ phrases.meta_separator }}</span>
-        <span class="reading-time" title="{{ wordCount }} {{ phrases.words }}">{{ readingTime }} {{ phrases.min }} {{ phrases.read }}</span>        
+        <span class="reading-time" title="{{ wordCount }} {{ phrases.words }}">{{ readingTime }} {{ phrases.min }} {{ phrases.read }}</span>
     </div>
   </article>
 </a>
+{%- endif -%}
