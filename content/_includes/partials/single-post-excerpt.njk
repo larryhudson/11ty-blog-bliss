@@ -4,7 +4,6 @@
   <p class="post-type post-type--{{ post.data.type }}">
     {%- if post.data.type == "reading" -%}📚 Reading
     {%- elif post.data.type == "building" -%}🔨 Building
-    {%- elif post.data.type == "thinking" -%}💭 Thinking
     {%- else -%}{{ post.data.type | capitalize }}
     {%- endif -%}
   </p>
