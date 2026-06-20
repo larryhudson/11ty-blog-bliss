@@ -1,6 +1,6 @@
 const { IS_PRODUCTION } = require('./constants');
 const siteConfig = require('../content/_data/siteConfig');
-const pluginRss = require('@11ty/eleventy-plugin-rss');
+const { rssPlugin } = require('@11ty/eleventy-plugin-rss');
 const { EleventyHtmlBasePlugin } = require('@11ty/eleventy');
 const pluginEmoji = require('eleventy-plugin-emoji');
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
@@ -41,7 +41,7 @@ const plugins = [
     body: EleventyHtmlBasePlugin,
   },
   {
-    body: pluginRss,
+    body: rssPlugin,
   },
   {
     body: pluginEmoji,
