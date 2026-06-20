@@ -12,6 +12,7 @@ import path from 'node:path';
 const url = (process.env.URL || '').trim();
 const description = (process.env.DESCRIPTION || '').trim();
 const type = (process.env.TYPE || 'reading').trim();
+const providedTitle = (process.env.TITLE || '').trim();
 
 if (!url) {
   console.error('URL is required (set the URL env var).');
@@ -64,7 +65,8 @@ function yamlQuote(s) {
   return '"' + s.replace(/\\/g, '\\\\').replace(/"/g, '\\"') + '"';
 }
 
-const title = await fetchTitle(url);
+// Use the supplied title if given, otherwise detect it from the page.
+const title = providedTitle || (await fetchTitle(url));
 
 const now = new Date();
 const yyyy = String(now.getFullYear());
