@@ -3,7 +3,7 @@
   "tags": [
     "post"
   ],
-  "permalink": "{% if customPermalink %}{{ customPermalink }}{% else %}/{{ title | slugify }}/{% endif %}",
+  "permalink": "{% if customPermalink %}{{ customPermalink }}{% elif type == 'reading' %}/reading/{{ title | slugify }}/{% elif type == 'building' %}/building/{{ title | slugify }}/{% else %}/{{ title | slugify }}/{% endif %}",
   "language": "en",
   "published": true,
   "ogType": "article",
