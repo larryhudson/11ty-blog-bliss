@@ -21,6 +21,11 @@ on:
         description: reading or building
         required: false
         default: reading
+      shouldPublish:
+        description: Publish immediately (merge the PR) instead of opening a draft
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -43,13 +48,15 @@ jobs:
           DESCRIPTION: ${{ inputs.description }}
           TITLE: ${{ inputs.title }}
           TYPE: ${{ inputs.type }}
+          SHOULD_PUBLISH: ${{ inputs.shouldPublish }}
         run: node scripts/new-stream-item.mjs
 
-      - name: Open draft PR
+      - name: Open PR
+        id: cpr
         uses: peter-evans/create-pull-request@v7
         with:
           branch: ${{ steps.create.outputs.branch }}
-          draft: true
+          draft: ${{ steps.create.outputs.publish != 'true' }}
           title: 'Add ${{ inputs.type }}: ${{ steps.create.outputs.title }}'
           commit-message: 'Add ${{ inputs.type }} item: ${{ steps.create.outputs.title }}'
           add-paths: content/posts/**
@@ -60,3 +67,9 @@ jobs:
             - File: `${{ steps.create.outputs.path }}`
 
             Edit the wording if you want, then mark it ready and merge.
+
+      - name: Publish (merge) if requested
+        if: ${{ steps.create.outputs.publish == 'true' && steps.cpr.outputs.pull-request-number }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh pr merge ${{ steps.cpr.outputs.pull-request-number }} --squash --delete-branch
