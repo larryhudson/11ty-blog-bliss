@@ -268,7 +268,7 @@ module.exports = {
     // Path to Twtxt file, used as permalink in the template
     path: '/twtxt.txt',
     // Path to your Twtxt avatar
-    avatar: '/images/Larry_366.png',
+    avatar: '/images/Larry_2026.png',
     // Separator used in Twtxt post contents between a title and a link
     separator: ' - ',
     // How many posts should be displayed in Twtxt file?
