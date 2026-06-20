@@ -133,3 +133,35 @@
     color: var(--post-meta-color);
   }
 }
+
+// Horizontal filter sub-nav at the top of the blog / type listing pages.
+// Matches the main nav: default link colour, active item underlined via a
+// bottom border. Just a little smaller.
+.stream-subnav {
+  margin-bottom: 1.5rem;
+  font-family: var(--arial-font-family);
+  font-size: 0.875rem;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+
+  li {
+    line-height: 1;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid transparent;
+
+    &.active {
+      border-bottom-color: var(--link-color);
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
