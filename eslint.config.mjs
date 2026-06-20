@@ -51,4 +51,10 @@ export default [
       semi: ['error', 'always'],
     },
   },
+  {
+    files: ['**/*.mjs'],
+    languageOptions: {
+      sourceType: 'module',
+    },
+  },
 ];
