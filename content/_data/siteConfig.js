@@ -128,7 +128,7 @@ module.exports = {
   // ---------------------------------------------------------------------------
   tags: {
     // If true, tag list will be displayed on the archive page
-    displayOnArchivePage: true,
+    displayOnArchivePage: false,
     // If true tags will be displayed below the content of the article
     displayOnPostPage: true,
     // URL prefix for tag pages. If you set 'tag' as your tag prefix,
