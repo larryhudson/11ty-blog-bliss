@@ -3,7 +3,7 @@
   <head>
     {% include "partials/head.njk" %}
   </head>
-  <body>
+  <body{% if homepage %} class="homepage"{% endif %}>
     {% include "partials/header.njk" %}
     <div id="main" class="container">
       {{ content|safe }}

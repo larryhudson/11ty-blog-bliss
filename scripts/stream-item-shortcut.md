@@ -1,8 +1,10 @@
 # Adding stream items from an Apple Shortcut
 
 The `Add stream item` GitHub Actions workflow (`.github/workflows/add-stream-item.yml`)
-takes a URL and a short description, fetches the page title, writes a `reading` (or
-`building`) post, and opens a **draft PR**. An Apple Shortcut triggers it via the GitHub API.
+takes a URL and a short description, fetches the page title, writes a `building`
+post, and opens a **draft PR**. An Apple Shortcut triggers it via the GitHub API.
+The reading list has been retired; old shortcuts sending `type: reading` will fail
+without creating a post.
 
 ## One-time setup
 
@@ -39,19 +41,18 @@ Make a new Shortcut with these actions:
      - `inputs` (Dictionary):
        - `url` (Text): the Shortcut Input / URL from step 1
        - `description` (Text): the answer from step 2
-       - `type` (Text): `reading`
+       - `type` (Text): `building`
        - `title` (Text, optional): leave empty to use the page's detected title,
          or pass your own to override it
        - `shouldPublish` (Boolean, optional): `true` merges the PR straight away
          (publishes), anything else opens a draft to review first
-4. (Optional) **Show Notification**: "Reading item submitted".
+4. (Optional) **Show Notification**: "Building item submitted".
 
 A successful dispatch returns `204 No Content`. The workflow then runs and opens a draft
 PR within a minute or so.
 
 ## Notes
 
-- For a "building" item (a repo), duplicate the Shortcut and set `type` to `building`.
 - The post body defaults to your description; edit the wording in the draft PR before merging.
 - Title is fetched server-side (prefers `og:title`, falls back to `<title>`), so the
   Shortcut only sends the URL and description.

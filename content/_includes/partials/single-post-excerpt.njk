@@ -2,8 +2,7 @@
 {%- set typeLabel -%}
   {%- if post.data.type -%}
   <p class="post-type post-type--{{ post.data.type }}">
-    {%- if post.data.type == "reading" -%}📚 Reading
-    {%- elif post.data.type == "building" -%}🔨 Building
+    {%- if post.data.type == "building" -%}🔨 Building
     {%- else -%}{{ post.data.type | capitalize }}
     {%- endif -%}
   </p>
@@ -16,11 +15,7 @@
     <header>
       {{ typeLabel | safe }}
       <h2 class="post-title">
-        {%- if post.data.type == "reading" -%}
-        <em class="reading-title">&ldquo;{{ post.data.title }}&rdquo;</em>
-        {%- else -%}
         {{ post.data.title }}
-        {%- endif -%}
         <span class="external-arrow" aria-hidden="true">↗</span>
       </h2>
     </header>

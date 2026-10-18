@@ -1,0 +1,8 @@
+/blog /archive/ 301
+/blog/* /archive/ 301
+/writing /archive/ 301
+/writing/* /archive/ 301
+/building /archive/ 301
+/building/ /archive/ 301
+/subscribe /archive/ 301
+/subscribe/ /archive/ 301

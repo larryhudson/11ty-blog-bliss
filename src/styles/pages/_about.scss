@@ -14,3 +14,67 @@
     margin: 2rem auto;
   }
 }
+
+.homepage {
+  .header {
+    position: static;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    margin: 0;
+
+    .main-nav,
+    .hamburger {
+      display: none;
+    }
+
+    .theme-switcher {
+      position: static;
+    }
+  }
+
+  #main {
+    margin-top: 2rem;
+  }
+
+  h1 {
+    margin-bottom: 2rem;
+  }
+
+  .myphoto {
+    max-width: 10rem;
+    border-radius: 0.5rem;
+  }
+
+  .footer {
+    margin-top: 2rem;
+
+    .links,
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      width: auto;
+    }
+
+    .links {
+      justify-content: flex-start;
+      flex-direction: row;
+      margin: 1rem 0;
+    }
+
+    .copyright {
+      display: none;
+    }
+  }
+
+  @include mixins.mobile {
+    #main {
+      margin-top: 0;
+    }
+
+    .myphoto {
+      margin: 0 0 1.5rem;
+    }
+  }
+}

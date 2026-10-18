@@ -15,7 +15,7 @@ module.exports = {
     // It is also used as a fallback description if no custom description
     // is provided for a page / post.
     description:
-      'Software engineer at CO2 AI, figuring out how engineering teams actually work with AI.',
+      'Australian software engineer in London. AI product development, developer experience and digital accessibility.',
     // Production URL. Used by 'alwaysProductionUrl' filter.
     // If none is provided, relative paths will be used
     // and in some cases (like sitemap.xml) that is TOTALLY NOT what you want
@@ -80,13 +80,7 @@ module.exports = {
     // ALL links provided here will be added to <head> section of your site
     // with a rel='me' attribute so that you can verify their ownership
     // on Mastodon and other services that use this method of verification.
-    fediverse: [
-      {
-        username: 'larryhudson',
-        server: 'indieweb.social',
-        url: 'https://indieweb.social/@larryhudson',
-      },
-    ],
+    fediverse: [],
   },
   // ---------------------------------------------------------------------------
   // Pages linked in the footer on the right side
@@ -99,14 +93,6 @@ module.exports = {
     {
       url: 'https://github.com/larryhudson/',
       title: 'GitHub',
-    },
-    {
-      url: 'https://indieweb.social/@larryhudson',
-      title: 'Mastodon',
-    },
-    {
-      url: 'https://last.fm/user/harryludson',
-      title: 'Last.fm',
     },
   ],
   // ---------------------------------------------------------------------------

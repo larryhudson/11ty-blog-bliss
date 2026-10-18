@@ -1,8 +1,8 @@
-// Creates a new stream post (reading / building) from a URL + description.
+// Creates a new building post from a URL + description.
 // The page title is fetched and parsed here so the Apple Shortcut only has to
 // send the URL and a short description.
 //
-// Inputs (env): URL (required), DESCRIPTION (optional), TYPE (default "reading")
+// Inputs (env): URL (required), DESCRIPTION (optional), TYPE (only "building")
 // On GitHub Actions it appends title/path/branch/slug to $GITHUB_OUTPUT.
 // Dependency-free: uses Node built-ins and global fetch (Node 18+).
 
@@ -11,10 +11,15 @@ import path from 'node:path';
 
 const url = (process.env.URL || '').trim();
 const description = (process.env.DESCRIPTION || '').trim();
-const type = (process.env.TYPE || 'reading').trim();
+const type = (process.env.TYPE || 'building').trim();
 const providedTitle = (process.env.TITLE || '').trim();
 // Accept a boolean either as a real boolean or a "true"/"1"/"yes" string.
 const shouldPublish = /^(true|1|yes)$/i.test((process.env.SHOULD_PUBLISH || '').trim());
+
+if (type !== 'building') {
+  console.error('Only building posts are supported; the reading list has been retired.');
+  process.exit(1);
+}
 
 if (!url) {
   console.error('URL is required (set the URL env var).');
@@ -80,7 +85,7 @@ const slug = slugify(title);
 const dir = path.join('content', 'posts', yyyy);
 const filepath = path.join(dir, `${mm}-${dd}-${slug}.md`);
 
-const tags = type === 'building' ? ['ai', 'building'] : ['ai', 'reading'];
+const tags = ['ai', 'building'];
 const tagLines = tags.map((t) => `  - ${t}`).join('\n');
 const body = description || `[${title}](${url})`;
 

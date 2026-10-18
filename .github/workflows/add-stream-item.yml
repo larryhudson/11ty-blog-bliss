@@ -1,7 +1,7 @@
 name: Add stream item
 
 # Triggered from the Apple Shortcut via the GitHub API (workflow_dispatch).
-# Fetches the page title, writes a reading/building post, and opens a draft PR.
+# Fetches the page title, writes a building post, and opens a draft PR.
 
 on:
   workflow_dispatch:
@@ -18,9 +18,12 @@ on:
         required: false
         default: ''
       type:
-        description: reading or building
+        description: Post type (reading list retired)
         required: false
-        default: reading
+        type: choice
+        options:
+          - building
+        default: building
       shouldPublish:
         description: Publish immediately (merge the PR) instead of opening a draft
         required: false
